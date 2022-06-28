@@ -8,16 +8,17 @@ int main()
     {
         sum=0;
         while(num!=0)
-        {
-            rem=num%10;
-            sum+=(rem*rem);
-            num/=10;
-        }
-        num=sum;
+    {
+        rem=num%10;
+        sum+=(rem*rem);
+        num/=10;
     }
-    if(sum==1)
-    printf("True");
-    else
-    printf("False");
-    return 0;
+    num=sum;
+    }
+     if(sum==1)
+     printf("True");
+     else
+     printf("False");
+     return 0;
+    
 }
