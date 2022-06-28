@@ -1,33 +1,26 @@
 #include<stdio.h>
-#include<math.h>
-int tej(int n)
+int calculateDigits(int num)
 {
-    int r,sum=0;
-    while(n)
+    int sum=0;
+    while(num!=0)
     {
-        r=n%10;
-        n=n/10;
-        sum=sum+r;
+        sum+=(num%10);
+        num/=10;
     }
+    if(sum>=10)
+    calculateDigits(sum);
+    else 
     return sum;
 }
-int tej1(int k)
-{
-	int c;
-	c=log10(k)+1;
-	return c;
-}
-  
 int main()
 {
-    int n,i,k;
+    int n,sum;
     scanf("%d",&n);
-    i=n;
-    while(tej1(i)!=1)
-	{
-		k=tej(i);
-		i=k;
-	}
-    printf("%d",i);
-    
+    if(n<0)
+    {
+        return -1;
+    }
+        sum=calculateDigits(n);
+        printf("%d",sum);
+        return 0;
 }
