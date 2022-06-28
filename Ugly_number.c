@@ -6,7 +6,7 @@ int main()
     scanf("%d",&n);
     while(n!=1)
     {
-        if (n % 5 == 0)
+        if(n%5==0)
         {
             n/=5;
         }
@@ -21,7 +21,7 @@ int main()
         else
         {
             printf("Not Ugly Number");
-            x = 1;
+            x=1;
             break;
         }
     }
