@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,digit;
+    int n, i, digit;
     static int arr[10];
     scanf("%d",&n);
     while(n>0)
@@ -10,7 +10,7 @@ int main()
         arr[digit]++;
         n=n/10;
     }
-    for(i=0;i<10;i++)
+    for(i=0; i<10;i++)
     {
         if(arr[i]>1)
         {
