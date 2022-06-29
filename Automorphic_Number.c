@@ -1,34 +1,33 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    long int n,sqr,rev1=0,rev2=0,m,sount=0,cout=0;
-    scanf("%ld",&n);
-    sqr=n*n;
-    while(n>0)
-    {
-        m=n%10;
-        sount++;
-        rev1=(rev1*10)+m;
-        n/=10;
-    }
-    while(sqr>0)
-    {
-         m=sqr%10;
-        cout++;
-        rev2=(rev2*10)+m;
-        if(sount==cout)
-        {
-            break;
-        }
-        sqr/=10;
-    }
-    if(rev1==rev2)
-    {
-        printf("Automorphic Number");
-    }
-    else
-    {
-        printf("Not an Automorphic Number");
-    }
-    return 0;
+	int a,b,c,d,r;
+	scanf("%d",&a);
+	if(a<0)
+	{
+	  b=a+2*(-a);	
+	}
+	else
+	{
+		b=a;
+	}
+	c=log10(b)+1;
+	d=b*b;
+	while(d)
+	{
+		r=d%(int)pow(10,c);
+	//	r=d/pow(10,c);
+		if(r==a)
+		{
+			printf("Automorphic Number");
+			break;
+		}
+		else
+		{
+			printf("Not an Automorphic Number");
+			break;
+		}
+	}
 }
+ 
